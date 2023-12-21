@@ -40,4 +40,10 @@ export class HomePageComponent {
   toggleItem(item: WishItem) {
     item.isComplete = !item.isComplete;
   }
+
+  sayAah() {
+    console.log(
+      'hello from home page component :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D :D'
+    );
+  }
 }

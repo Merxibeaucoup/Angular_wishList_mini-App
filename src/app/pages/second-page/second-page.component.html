@@ -1,0 +1,16 @@
+<div class="form">
+  <p>
+    This component demonstrates how to use ©️viewchild to set value for other
+    fields
+  </p>
+  <form>
+    <mat-form-field>
+      <mat-label>DOB: </mat-label>
+      <input matInput type="date" #dobInput (blur)="calculateAge()" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Age: </mat-label>
+      <input matInput type="text" #ageInput />
+    </mat-form-field>
+  </form>
+</div>
