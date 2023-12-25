@@ -19,6 +19,6 @@ export class AddUserComponent {
     this.userService.AddNewUser(this.username, this.status);
     this.username = '';
     this.status = 'active';
-    console.log(this.userService.users);
+    // console.log(this.userService.users);
   }
 }
