@@ -1,0 +1,23 @@
+<div>
+  <div style="display: flex; flex-direction: column; width: 300px">
+    <mat-form-field>
+      <mat-label>username</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="username"
+        id="username"
+        [(ngModel)]="username"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select an option</mat-label>
+      <mat-select name="status" id="status" [(ngModel)]="status">
+        <mat-option>None</mat-option>
+        <mat-option value="active">Active</mat-option>
+        <mat-option value="inactive">Inactive</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button (click)="AddUser()">Create User</button>
+  </div>
+</div>
