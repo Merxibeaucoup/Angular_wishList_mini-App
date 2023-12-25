@@ -1,12 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { JavaComponent } from './components/java/java.component';
+import { PythonComponent } from './components/python/python.component';
+import { EnrollService } from '../../services/enroll.service';
+import { UserService } from '../../services/user.service';
+import { CommonModule } from '@angular/common';
+import { AddUserComponent } from './components/add-user/add-user.component';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [],
+  imports: [JavaComponent, PythonComponent, CommonModule, AddUserComponent],
   templateUrl: './courses.component.html',
-  styleUrl: './courses.component.scss'
+  styleUrl: './courses.component.scss',
+  providers: [EnrollService, UserService],
 })
-export class CoursesComponent {
+export class CoursesComponent implements OnInit {
+  constructor(
+    private enrollService: EnrollService,
+    private userService: UserService
+  ) {}
 
+  users: { name: string; status: string }[] = [];
+
+  ngOnInit(): void {
+    this.users = this.userService.users;
+  }
 }

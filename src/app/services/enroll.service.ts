@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EnrollService {
+  constructor() {}
 
-  constructor() { }
+  onEnrollClicked(title: string) {
+    console.log('Enroll clicked: ' + title);
+    alert(`Thank you for enrolling in ${title}`);
+    return true;
+  }
 }
